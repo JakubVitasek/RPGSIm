@@ -46,6 +46,7 @@ while(true)
     {
         Console.WriteLine($"{jmenoPostavy} spinká");
         Console.WriteLine(". . .");
+        
         Thread.Sleep(10000);
         Spanek = 0;
         foreach (var radekSlovniku in atributy)
