@@ -14,7 +14,10 @@ int Spanek = 0;
 
 int Level = 0;
 
-while(true)
+Random rand = new Random();
+int cislo2 = rand.Next(0, 100);
+
+while (true)
 {
     Console.WriteLine($"{jmenoPostavy} je unavený na {Spanek}%");
     Console.WriteLine($"Chce se {jmenoPostavy}  vyspat nebo vyrazit na Quest? Q/V");
@@ -31,6 +34,12 @@ while(true)
         Thread.Sleep(1000);
         Console.WriteLine($"{jmenoPostavy} se z výpravy vrátil živ a zdráv");
         Console.WriteLine(". . .");
+
+       
+
+
+
+
         Spanek = Spanek + 10;
         atributy[vygAtr]  +=10;
         Level = Level + 1;
@@ -40,9 +49,18 @@ while(true)
             Console.WriteLine($"Skill : {radekSlovniku.Key}, Level : {radekSlovniku.Value}");
         }
         Console.WriteLine(". . .");
-    }
 
-    if(input == "V")
+        
+
+    }
+    if (cislo2 < Spanek)
+    {
+        Console.WriteLine("Umřel si !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        break;
+    }
+      
+
+    if (input == "V")
     {
         Console.WriteLine($"{jmenoPostavy} spinká");
         Console.WriteLine(". . .");
